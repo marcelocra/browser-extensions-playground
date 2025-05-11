@@ -4,11 +4,17 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap demo</title>
+
+    <!-- Dev-only! -->
     <script src="./vendored/tailwindcss-from-play-cdn.js" type="module"></script>
+    <link href="./input.css" rel="stylesheet">
+
     <link href="./output.css" rel="stylesheet">
   </head>
-  <body>
-    <h1 class="bg-red-500">Hello, world!</h1>
+  <body class="min-w-md min-h-56 bg-slate-100">
+    <div class="bg-white m-3 rounded shadow border border-slate-100">
+      <button class="p-1 w-full" id="save-opened-tabs"></button>
+    </div>
     <script src="./popup.js" type="module"></script>
   </body>
 </html>
