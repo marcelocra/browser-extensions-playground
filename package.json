@@ -1,0 +1,30 @@
+{
+  "name": "@marcelocra/browser-extensions-playground",
+  "version": "0.0.1",
+  "description": "",
+  "type": "module",
+  "scripts": {
+    "dev": "@tailwindcss/cli -i ./input.css -o ./output.css --watch",
+    "prod": "@tailwindcss/cli -i ./input.css -o ./output.css --minify",
+    "build": "npm run prod"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "4.1.6",
+    "tailwindcss": "4.1.6"
+  },
+  "keywords": [],
+  "license": "ISC",
+  "packageManager": "pnpm@10.5.2",
+  "engines": {
+    "node": ">= 22"
+  },
+  "engineStrict": true,
+  "author": {
+    "name": "Marcelo Almeida",
+    "email": "2532492+marcelocra@users.noreply.github.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/marcelocra/browser-extensions-playground"
+  }
+}
