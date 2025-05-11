@@ -1,0 +1,60 @@
+{
+  "manifest_version": 3,
+  "version": "0.1.0",
+  "name": "Extension Playground",
+  "description": "Learn and improve the browser while using it.",
+  "permissions": [
+    "activeTab",
+    "alarms",
+    "bookmarks",
+    "contextMenus",
+    "notifications",
+    "scripting",
+    "sidePanel",
+    "storage",
+    "tabGroups",
+    "tabs"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "./service-worker.js",
+    "type": "module"
+  },
+  "action": {
+    "default_popup": "./popup.html"
+  },
+  "side_panel": {
+    "default_path": "./side-panel.html"
+  },
+  "options_page": "./options.html",
+  "content_scripts": [
+    {
+      "run_at": "document_end",
+      "matches": [
+        "<all_urls>"
+      ],
+      "css": [
+        "./content-script.css"
+      ],
+      "js": [
+        "./content-script.js"
+      ]
+    }
+  ],
+  "commands": {
+    "RUN_COMMAND": {
+      "suggested_key": {
+        "default": "Alt+R"
+      },
+      "description": "Run a command."
+    },
+    "_execute_action": {
+      "suggested_key": {
+        "default": "Ctrl+Space"
+      },
+      "description": "Opens the command pallete."
+    }
+  }
+}
